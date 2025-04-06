@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Animacija</title>
+    <style>
+        #mainbox {
+            position:relative;
+             width: 700px;
+            height: 600px;
+            margin:0 auto;
+            background-color: #050210;}
+        
+        #circle1{
+            position:relative;
+            transform:translateY(-600px);
+            content:'';
+            width:400px;
+            height:400px;
+            margin:0 auto;
+            border:1px;
+            border-style: hidden;
+            background:linear-gradient(to right,#b97aff 0%,#55fb9f 50%, #fb5dad 100%);
+            border-radius: 100%;
+            animation:  animationcircle1 1s linear infinite forwards running;
+        }
+        #circleshadow{
+           transform:translateY(50px);
+            content:'';
+            width: 400px;
+            height:400px;
+            margin:0 auto;
+            border:1px;
+            border-style: hidden;
+            background:linear-gradient(to right,#b97aff 0%,#55fb9f 50%, #fb5dad 100%);
+            border-radius: 100%;
+            filter:blur(90px);
+            border-radius: 100%;
+            animation:  animationshadow 1s linear infinite forwards running;
+        
+        }
+        #circle2{
+            transform:translateY(-675px);
+            content:'';
+            width:350px;
+            height:350px;
+            margin:0 auto;
+            border:1px;
+            border-style: hidden;
+            background:#050210;
+            border-radius: 100%;
+        }
+        #circle2::before{
+            position:absolute;
+            content:'';
+            width:100px;
+            height:100px;
+            bottom:125px;
+            left: 125px;
+            margin:0 auto;
+            border:1px;
+            border-style: hidden;
+            border-radius: 100%;
+            background:#b97aff;
+            filter:brightness(12%);
+            animation:  animationinnercircle 1s linear infinite forwards running;
+            }
+        
+        @keyframes animationcircle1 {
+            0%{transform: translateY(-300px) rotate(0deg);}
+            100%{transform:translateY(-300px) rotate(360deg);}
+            }
+        @keyframes animationshadow {
+            0%{transform: translateY(90px) rotate(0deg);}
+            100%{transform:translateY(90px) rotate(360deg);}
+            }
+        @keyframes animationinnercircle {
+            0%{ transform:scale(1,1)}
+            100%{transform:scale(2.8,2.8);}
+            }    
+    </style>
+</head>
+
+<body>
+    <div id="mainbox">
+            <div id="circleshadow"></div>
+            <div id="circle1"></div>
+            <div id="circle2"></div>
+    </div>
+</body>
+</html>
