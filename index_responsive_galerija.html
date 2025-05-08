@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset='utf-8'>
+    <title>Responsive Gallery</title>
+    <style>
+
+    body{
+         font: 1em sans-serif;
+        max-width: 960px;
+        width: 90%;
+        margin: 3px auto;
+        padding: 10px;
+        }
+
+    h1  {font-weight: lighter;}
+        
+    #gallery{display:grid;
+        grid-template-columns: repeat(5, minmax(120px, 1fr));
+        grid-auto-rows:130px;
+        gap:40px;
+        text-align: center;
+        }
+
+    .galerypicture{height:130px;
+        border:1px solid black;
+        border-radius:10px;
+        }
+
+    .image{
+            background-image:url("placeholder-image.png");
+            background-size:contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-color:#6C9CC8;
+            height:100px;
+            border-radius:10px 10px 0 0;
+        }
+
+    .title{height:30px;
+        padding: 4px;
+          }
+
+    article{padding-top:10px;
+        text-align:justify;}
+    
+                   
+    @media screen and (max-width: 1024px) {
+        #gallery {
+        grid-template-columns: repeat(5, minmax(120px,1fr));
+        }
+        }
+ 
+    @media screen and (max-width: 768px) {
+        #gallery {
+        grid-template-columns: repeat(3,1fr);
+        }
+        }
+ 
+    @media screen and (max-width: 414px) {
+        #gallery {
+        grid-template-columns: repeat(1, 1fr);
+        }
+        }   
+    </style>
+</head>
+<body>
+    <div id="responsive_gallery">
+        <header><h1>Gallery Heading</h1></header>
+        <gallery id="gallery">
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div> 
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+            <div class="galerypicture">
+                <div class="image"></div>
+                <div class="title">Image Title</div>
+            </div>
+           
+        </gallery>
+
+        <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a lacinia nisi, nec tristique sem. 
+                Cras id tellus ac amuris posuere varius. Pellentesque vel mi justo. 
+                Aenean malesuada purus eu lacinia finibus. Praesent commodo euismodo odio, 
+                eu pharetra nulla dignissim nec. Ut id nulla augue. Duis ultricies euismod purus,
+                 ut lobortis tortor semper a. Nam eleifend accumsan elit, in elementum lacus. 
+                 Nunc varius imperdiet noso, eget pretium augue molestie a. Nullam ut malesuada enim. 
+                 Integer non velit fringilla, porta ex vitae, 
+                porttitor velit. Ut luctus lacinia libero a scelerisque. Ut ullamcorper arcu at mauris ullamcorper tempor.
+            </p>
+        </article>
+       
+
+
+</body>
+</html>
